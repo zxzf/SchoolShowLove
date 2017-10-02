@@ -139,7 +139,7 @@
 	    </div>
 	    <div class="panel-body">
 	      	<p>&nbsp;&nbsp;&nbsp;&nbsp;<?=$rows[content]?></p>
-	        <div class="shijian2">FROM：<?=$rows[fromname] ?>(<?=$rows[ip]?>)</div>
+	        <div class="shijian2">FROM：<?=$rows[fromname] ?></div>
 	    </div>
 	    </div>
 	    <?php
