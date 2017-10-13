@@ -16,4 +16,9 @@
     $list = explode(',',$_SERVER['HTTP_X_FORWARDED_FOR']);
     $_SERVER['REMOTE_ADDR'] = $list[0];
 }
+	if ($_COOKIE["message"]){
+	}else{
+	setcookie("message", "yes", time()+43200);
+	echo "<script>alert('欢迎进入校园表白墙，使用本服务之前请保证不会恶意发布信息、不会诽谤辱骂他人，否则将封锁IP并移交有关机关立案审查。')</script>";
+	}
 ?>
