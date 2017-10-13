@@ -27,12 +27,12 @@
 		?>
 		<div class="container-fluid">
 	    <div class="jumbotron">
-		    <h1>吉安一中校园表白墙</h1>
+		    <h1>校园表白墙</h1>
 		    <p>让你的爱大声说出口</p>
 		    <p><a class="btn btn-primary btn-lg" role="button" href="call.php">我要表白</a></p>
 	    </div>
 	    <div class="alert alert-success" role="alert">
-			<?php echo $row1['name'];?>吉安一中校园表白墙<br/>
+			<?php echo $row1['name'];?>校园表白墙<br/>
 			您搜索到<span class="badge"><?php echo $totalNumber ?></span>条表白内容
 	    </div>
 	    <div class="alert alert-info" role="alert">

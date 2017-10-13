@@ -27,7 +27,7 @@
 		?>
 		<div class="container-fluid">
 	    <div class="jumbotron">
-		    <h1>吉安一中校园表白墙</h1>  
+		    <h1>校园表白墙</h1>  
 		  <p><script type="text/javascript" src="https://api.imjad.cn/hitokoto/?encode=js&charset=utf-8"></script>
         <p id="hitokoto"><script>hitokoto()</script></p>
         <script>
@@ -107,7 +107,7 @@
 		    <p><a class="btn btn-primary btn-lg" role="button" href="call.php">我要表白</a></p>
 	    </div>
 	    <div class="alert alert-success" role="alert">
-			 吉安一中校园表白墙<br/>
+			 校园表白墙<br/>
 			 已经有<span class="badge"><?php echo $totalNumber ?></span>条表白被发布
 	    </div>
 	    <div class="alert alert-info" role="alert">
