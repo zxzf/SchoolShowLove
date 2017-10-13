@@ -7,11 +7,12 @@
 	setcookie("userip", "yes" , time()+300);
 	$name = $_POST['realname'];
 	$to = $_POST['towho'];
+	$qq = $_POST['qq'];
 	$content = $_POST['content'];
 	$ip = $_SERVER["REMOTE_ADDR"];
 	date_default_timezone_set('Etc/GMT-8');
 	$lastdate = date("Y-m-d H:i");
-	$sql = "insert into list (fromname,toname,content,lastdate,ip)  values('$name','$to','$content','$lastdate','$ip')";
+	$sql = "insert into list (fromname,toname,content,lastdate,ip,qq)  values('$name','$to','$content','$lastdate','$ip','$qq')";
 	$result = mysql_query($sql);
 	header('Location:index.php');
 ?>
