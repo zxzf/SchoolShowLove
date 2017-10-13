@@ -4,6 +4,15 @@
 	$sql = 'select * from system';
 	$res=mysql_query($sql);
 	$row = mysql_fetch_array($res);
+	if ($_COOKIE["disagree"]){//判断是否同意
+	echo "<script>alert('你已拒绝本网站服务条款。')</script>";
+	echo "<script>window.location.href='index.php'</script>";
+	}else{
+		if ($_COOKIE["agree"]){
+		}else{	
+		echo "<script>window.location.href='pact.php'</script>";
+		}
+	}
 ?>
 <html lang="zh_cn">
 	<head>
