@@ -1,9 +1,9 @@
 ﻿<?php
 	include ('conn.php');
-	mysql_query("set names utf8");
+	mysqli_query($conn,"set names utf8");
 	$sql = 'select * from system';
-	$res=mysql_query($sql);
-	$row = mysql_fetch_array($res);
+	$res=mysqli_query($conn,$sql);
+	$row = mysqli_fetch_array($res);
 	if ($_COOKIE["disagree"]){//判断是否同意
 	echo "<script>alert('你已拒绝本网站服务条款。')</script>";
 	echo "<script>window.location.href='index.php'</script>";

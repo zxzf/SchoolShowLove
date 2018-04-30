@@ -1,10 +1,10 @@
 ﻿<?php
 	session_start(); 
 	include ('conn.php');
-	mysql_query("set names utf8");
+	mysqli_query($conn,"set names utf8");
 	$sql = 'select * from system';
-	$res=mysql_query($sql);
-	$row = mysql_fetch_array($res);
+	$res=mysqli_query($conn,$sql);
+	$row = mysqli_fetch_array($res);
 	$searchs = $_POST['search'];
 ?>
 <!DOCTYPE html>
@@ -21,8 +21,8 @@
 	<body>
 		<div class="bodydiv">
 		<?php
-			$count1=mysql_query("select count(*) from list where toname = '".$searchs."'"); //获得记录总数
-			$rs=mysql_fetch_array($count1);
+			$count1=mysqli_query($conn,"select count(*) from list where toname = '".$searchs."'"); //获得记录总数
+			$rs=mysqli_fetch_array($count1);
 			$totalNumber=$rs[0];
 		?>
 		<div class="container-fluid">
@@ -40,8 +40,8 @@
 	    	<a href="index.php">返回表白墙</a>
 	    </div>
 		<?php
-			$result=mysql_query("select * from list where toname ='".$searchs."'order by id desc limit 99999"); //根据前面计算出开始记录和记录数
-			while ($rows=mysql_fetch_array($result)) {
+			$result=mysqli_query($conn,"select * from list where toname ='".$searchs."'order by id desc limit 99999"); //根据前面计算出开始记录和记录数
+			while ($rows=mysqli_fetch_array($result)) {
 		?>
 	    <div class="panel panel-info">
 	    	<div class="panel-heading"><strong>TO：<?=$rows[toname] ?></strong>

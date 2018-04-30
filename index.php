@@ -1,12 +1,11 @@
 ﻿<?php
 	session_start(); 
 	include ('conn.php');
-	mysql_query("set names utf8");
+	mysqli_query($conn,"set names utf8");
 	$sql = 'select * from system';
-	$res= mysql_query($sql);
-	$row = mysql_fetch_array($res);
+	$res= mysqli_query($conn,$sql);
+	$row = mysqli_fetch_array($res);
 ?>
-<html lang="zh_cn">
 	<head>
 		<title><?php echo $row['title'];?> - <?php echo $row['titlesm'];?></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -21,8 +20,8 @@
 		<?php
 			$perNumber=10; //每页显示记录数
 			$page=$_GET['page']; //获得当前页面值
-			$count1=mysql_query("select count(*) from list"); //获得记录总数
-			$rs=mysql_fetch_array($count1);
+			$count1=mysqli_query($conn,"select count(*) from list"); //获得记录总数
+			$rs=mysqli_fetch_array($count1);
 			$totalNumber=$rs[0];
 		?>
 		<div class="container-fluid">
@@ -130,8 +129,8 @@
 			 $page=1;
 			}
 			$startCount=($page-1)*$perNumber;
-			$result=mysql_query("select * from list order by id desc limit $startCount,$perNumber"); //根据前面计算出开始记录和记录数
-			while ($rows=mysql_fetch_array($result)) {
+			$result=mysqli_query($conn,"select * from list order by id desc limit $startCount,$perNumber"); //根据前面计算出开始记录和记录数
+			while ($rows=mysqli_fetch_array($result)) {
 		?>
 	    <div class="panel panel-info">
 	    	<div class="panel-heading"><strong>TO：<?=$rows[toname] ?></strong>
@@ -181,7 +180,7 @@ date.setUTCHours(0, 0, 0, 0);
 return date; 
 } 
 function showsectime() {
-var birthDay =NewDate("2017-10-01");
+var birthDay =NewDate("2018-05-01");
 var today=new Date();
 var timeold=today.getTime()-birthDay.getTime();
 var sectimeold=timeold/1000

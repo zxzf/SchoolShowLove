@@ -2,7 +2,7 @@
 	include ('conn.php');
 	ob_start();
 	header("Content-type: text/html; charset=utf-8");
-	mysql_query("set names utf8");
+	mysqli_query($conn,"set names utf8");
 	ini_set("output_buffering", "1");
 	setcookie("userip", "yes" , time()+300);
 	$name = $_POST['realname'];
@@ -13,6 +13,6 @@
 	date_default_timezone_set('Etc/GMT-8');
 	$lastdate = date("Y-m-d H:i");
 	$sql = "insert into list (fromname,toname,content,lastdate,ip,qq)  values('$name','$to','$content','$lastdate','$ip','$qq')";
-	$result = mysql_query($sql);
+	$result = mysqli_query($conn,$sql);
 	header('Location:index.php');
 ?>

@@ -9,12 +9,14 @@ CREATE TABLE `list` (
   `lastdate` varchar(255) NOT NULL DEFAULT '',
   `ip` varchar(255) NOT NULL DEFAULT '',
   `qq` varchar(255) NOT NULL DEFAULT '',
+  `phone` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
-insert into `list`(`Id`,`fromname`,`toname`,`content`,`lastdate`,`ip`,`qq`,) values
-('1','XX','XXXX','XXXX','2017-10-01 08:00','127.0.0.1','10001');
+insert into `list`(`Id`,`fromname`,`toname`,`content`,`lastdate`,`ip`,`qq`,`phone`) values
+('1','XX','XXXX','XXXX','2017-10-01 08:00','127.0.0.1','10001','10001');
 DROP TABLE IF EXISTS  `system`;
+
 CREATE TABLE `system` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL DEFAULT '',
