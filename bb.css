@@ -1,3 +1,10 @@
+body{
+	margin: 0px;
+	background: url(https://api.ikmoe.com/moeu-api.php); 
+	background-position: top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
 a{
 	text-decoration:none;
 }
