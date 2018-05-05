@@ -27,82 +27,9 @@
 		<div class="container-fluid">
 	    <div class="jumbotron">
 		    <h1>校园表白墙</h1>  
-		  <p><script type="text/javascript" src="https://api.imjad.cn/hitokoto/?encode=js&charset=utf-8"></script>
-        <p id="hitokoto"><script>hitokoto()</script></p>
-        <script>
-            function Ajax(type, url, data, success, failed){
-                // 创建ajax对象
-                var xhr = null;
-                if(window.XMLHttpRequest){
-                    xhr = new XMLHttpRequest();
-                } else {
-                    xhr = new ActiveXObject('Microsoft.XMLHTTP')
-                }
-             
-                var type = type.toUpperCase();
-                // 用于清除缓存
-                var random = Math.random();
-             
-                if(typeof data == 'object'){
-                    var str = '';
-                    for(var key in data){
-                        str += key+'='+data[key]+'&';
-                    }
-                    data = str.replace(/&$/, '');
-                }
-             
-                if(type == 'GET'){
-                    if(data){
-                        xhr.open('GET', url + '?' + data, true);
-                    } else {
-                        xhr.open('GET', url + '?t=' + random, true);
-                    }
-                    xhr.send();
-             
-                } else if(type == 'POST'){
-                    xhr.open('POST', url, true);
-                    // 如果需要像 html 表单那样 POST 数据，请使用 setRequestHeader() 来添加 http 头。
-                    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                    xhr.send(data);
-                }
-             
-                // 处理返回数据
-                xhr.onreadystatechange = function(){
-                    if(xhr.readyState == 4){
-                        if(xhr.status == 200){
-                            success(xhr.responseText);
-                        } else {
-                            if(failed){
-                                failed(xhr.status);
-                            }
-                        }
-                    }
-                }
-            }
-            
-            Ajax(  //Ajax(type, url, data, success, failed)
-                'get', 
-                'https://api.imjad.cn/hitokoto/counter.php', 
-                '', 
-                function(data){
-                    data = JSON.parse(data);
-                    document.getElementById("index").innerHTML = data.index;
-                    document.getElementById("api").innerHTML = data.api;
-                    document.getElementById("data_uid").innerHTML = data.data_uid;
-                    document.getElementById("hit").innerHTML = data.hit;
-                    document.getElementById("number").innerHTML = data.number;
-                    document.getElementById("number_uid").innerHTML = data.number_uid;
-                }, 
-                function(error){
-                    var spans = document.getElementsByClassName("update")[0].getElementsByTagName("span");
-                    for (var i=0;i<spans.length;i++){
-                        spans[i].innerHTML = "读取失败";
-                    }
-                });
-        </script>
+		  <p><?php echo file_get_contents("https://sslapi.hitokoto.cn/?encode=text"); ?>
     </body>
 </html></p>
-		  
 		    <p><a class="btn btn-primary btn-lg" role="button" href="call.php">我要表白</a></p>
 	    </div>
 	    <div class="alert alert-success" role="alert">
@@ -194,7 +121,13 @@ var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e
 document.getElementById("showsectime").innerHTML = "本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
 setTimeout(showsectime, 1000);
 }showsectime();
-</script></li>			
-			</ul>
+</script></li>	
+	</ul>
+	<div class="panel panel-info">
+		<div class="panel-body">
+		<strong>原作者：<a href="https://github.com/soulfme/SchoolShowLove">荧焤</a></strong></br>
+		<strong>维护者：<a href="https://moem.ml/">灵萌</a>———QQ:1287068448</strong></br>
+		<strong>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可。</strong>
+	</div></div>
 	</body>
 </html>
