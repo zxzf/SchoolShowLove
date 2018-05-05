@@ -126,7 +126,7 @@ setTimeout(showsectime, 1000);
 	<div class="panel panel-info">
 		<div class="panel-body">
 		<strong>原作者：<a href="https://github.com/soulfme/SchoolShowLove">荧焤</a></strong></br>
-		<strong>维护者：<a href="https://moem.ml/">灵萌</a>———QQ:1287068448</strong></br>
+		<strong>维护者：<a href="https://moem.ml/">灵萌</a></strong></br>
 		<strong>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可。</strong>
 	</div></div>
 	</body>
