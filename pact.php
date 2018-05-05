@@ -1,3 +1,4 @@
+
 	<?php
 	if ($_COOKIE["disagree"]){//判断是否同意
 	echo "<script>alert('你已拒绝本网站服务条款。')</script>";
@@ -23,10 +24,14 @@
 				</div>
 				<div class="panel-body">
 						<div class="alert alert-danger" role="alert">
-							<strong>内容</strong>
+							<strong>使用条款（暂定）</br>
+本服务是非盈利的、自由的、开放的，我们希望您在使用本服务的同时能遵守学校相关规定：不针对、暗讽某人，不造谣，不发布不友善的言论。</br>
+本服务为学生自发搭建，为了让本服务长久发展，请不要在此发布一些不尊重老师的言论。</br>
+根据网络安全法的有关规定，您在使用本服务时，我们将会记录您的IP地址。</br>
+</strong>
 						</div>
 						<div class="alert alert-warning" role="alert">
-							<strong>内容</strong>
+							<strong>招募管理员以及更多信息请访问：<a href="https://moem.ml/archives/schoollove.html">https://moem.ml/archives/schoollove.html</a></strong>
 						</div>
 						<button onclick="setcookie('agree')">我同意</button><button onclick="setcookie('disagree')">我不同意</button>
 						<script>

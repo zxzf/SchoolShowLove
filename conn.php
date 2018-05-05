@@ -21,4 +21,3 @@
 	echo "<script>alert('欢迎进入校园表白墙，使用本服务之前请保证不会恶意发布信息、不会诽谤辱骂他人，否则将封锁IP并移交有关机关立案审查。')</script>";
 	}
 ?>
-<body style="background-image: url(https://soulmoe.ml/back.php)">
