@@ -90,6 +90,9 @@
 						<input name="from" value="call" style="display: none;">
 						<input name="realname" class="form-control" placeholder="昵称..." required="" autofocus="autofocus"></br>
 						<input name="towho" class="form-control" placeholder="送给..." required="" autofocus=""></br>
+						<input name="qq" class="form-control" placeholder="你的QQ,不会显示出来..." autofocus=""></br>
+						<input name="phone" class="form-control" placeholder="被表白人手机号：如需通过匿名短信通知被表白人请填写..." autofocus=""></br>
+						<input name="key" class="form-control" placeholder="短信KEY：使用短信服务则填写，用于验证余额..." autofocus=""></br>
 						<textarea class="form-control" name="content" placeholder="留言内容（不超过140字）" rows="3" onkeyup='value=value.substr(0,140);this.nextSibling.innerHTML=value.length+"/140";'></textarea></br>
 						<input  class="btn btn-primary btn-lg btn-block" TYPE="submit" name="submit" value="发布表白" />
 					</form>
