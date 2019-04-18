@@ -40,7 +40,7 @@ CREATE TABLE `system` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `system` (`Id`, `title`, `titlesm`, `school`) VALUES
-(1, '校园表白墙', '喜欢就表白吧！', '第一中学');
+(1, '广播站留言板', ' ', '第一中学');
 
 ALTER TABLE `list`
   ADD PRIMARY KEY (`Id`);
