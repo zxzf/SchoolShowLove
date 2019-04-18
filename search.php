@@ -27,17 +27,17 @@
 		?>
 		<div class="container-fluid">
 	    <div class="jumbotron">
-		    <h1>校园表白墙</h1>
-		    <p>让你的爱大声说出口</p>
-		    <p><a class="btn btn-primary btn-lg" role="button" href="call.php">我要表白</a></p>
+		    <h1>留言板</h1>
+		    <p>leave something</p>
+		    <p><a class="btn btn-primary btn-lg" role="button" href="call.php">CALL！</a></p>
 	    </div>
 	    <div class="alert alert-success" role="alert">
-			<?php echo $row1['name'];?>校园表白墙<br/>
-			您搜索到<span class="badge"><?php echo $totalNumber ?></span>条表白内容
+			<?php echo $row1['name'];?>留言板<br/>
+			您搜索到<span class="badge"><?php echo $totalNumber ?></span>条内容
 	    </div>
 	    <div class="alert alert-info" role="alert">
-	    	您搜索的表白对象：<?php echo $searchs;?>
-	    	<a href="index.php">返回表白墙</a>
+	    	您搜索的内容：<?php echo $searchs;?>
+	    	<a href="index.php">返回首页</a>
 	    </div>
 		<?php
 			$result=mysqli_query($conn,"select * from list where toname ='".$searchs."'order by id desc limit 99999"); //根据前面计算出开始记录和记录数
