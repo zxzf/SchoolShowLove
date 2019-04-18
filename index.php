@@ -26,22 +26,22 @@
 		?>
 		<div class="container-fluid">
 	    <div class="jumbotron">
-		    <h1>校园表白墙</h1>  
+		    <h1>广播站留言板</h1>  
 		  <p><?php echo file_get_contents("https://sslapi.hitokoto.cn/?encode=text"); ?>
     </body>
 </html></p>
-		    <p><a class="btn btn-primary btn-lg" role="button" href="call.php">我要表白</a></p>
+		    <p><a class="btn btn-primary btn-lg" role="button" href="call.php">CALL！</a></p>
 	    </div>
 	    <div class="alert alert-success" role="alert">
-			 校园表白墙<br/>
-			 已经有<span class="badge"><?php echo $totalNumber ?></span>条表白被发布
+			 留言板<br/>
+			 已经有<span class="badge"><?php echo $totalNumber ?></span>条留言被发布
 	    </div>
 	    <div class="alert alert-info" role="alert">
 		    <div class="clearfix">
 		        <form method="post" action="search.php" name="search">
 			        <div class="col-lg-6">
 			            <div class="input-group">
-				            <input type="text" class="form-control" placeholder="填写要搜索的表白对象..." name="search" />
+				            <input type="text" class="form-control" placeholder="填写要搜索的内容..." name="search" />
 				            <span class="input-group-btn">
 				                <button class="btn btn-default" type="submit" value="Search">搜索</button>
 				            </span>
@@ -107,7 +107,7 @@ date.setUTCHours(0, 0, 0, 0);
 return date; 
 } 
 function showsectime() {
-var birthDay =NewDate("2018-05-01");
+var birthDay =NewDate("2019-4-18");
 var today=new Date();
 var timeold=today.getTime()-birthDay.getTime();
 var sectimeold=timeold/1000
@@ -118,7 +118,7 @@ var e_hrsold=(daysold-e_daysold)*-24;
 var hrsold=Math.floor(e_hrsold);
 var e_minsold=(hrsold-e_hrsold)*-60;
 var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
-document.getElementById("showsectime").innerHTML = "本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+document.getElementById("showsectime").innerHTML = "本站已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
 setTimeout(showsectime, 1000);
 }showsectime();
 </script></li>	
