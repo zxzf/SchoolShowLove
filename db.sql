@@ -20,7 +20,7 @@ CREATE TABLE `list` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `list` (`Id`, `fromname`, `toname`, `content`, `lastdate`, `ip`, `qq`, `phone`) VALUES
-(1, '关键词', '20', '开心吧', '2018-04-30 16:47', '', '', ''),
+(1, 'test', 'test', 'test-content', '2019-0418 00:00', '', '', ''),
 ;
 
 CREATE TABLE `sms` (
