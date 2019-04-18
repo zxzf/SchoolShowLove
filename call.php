@@ -37,7 +37,7 @@
 			{
 			with (thisform)
 			{
-			    if (validate_required(content,"请填写表白内容")==false)
+			    if (validate_required(content,"请填写内容")==false)
 			    {content.focus();return false}
 			}
 			with (thisform)
@@ -47,7 +47,7 @@
 			}
 			with (thisform)
 			{
-			    if (validate_required(towho,"请填写表白对象")==false)
+			    if (validate_required(towho,"请填写栏目")==false)
 			    {towho.focus();return false}
 			}
 			}
@@ -58,23 +58,20 @@
 		<?php
 		error_reporting(E_ALL^E_WARNING^E_NOTICE);
 		if ($_COOKIE["userip"]=='yes'){
-			echo "<script>alert('亲，五分钟内只能表白一次哦！')</script>";
+			echo "<script>alert('五分钟内只能发布一次哦！')</script>";
 			echo "<script>window.location.href='index.php'</script>";
 		}
 		?>
 		<div class="container-fluid">
 			<div class="panel panel-info">
 				<div class="panel-heading" align="center">
-					<h3 class="panel-title">书写出心中的那份爱</h3>
+					<h3 class="panel-title"></h3>
 				</div>
 				<div class="panel-body">
 					<form name="addForm" method="post" action="sumbit.php" onsubmit="return validate_form(this)" >
 						<div class="alert alert-warning" role="alert">
 							<strong>使用说明：</strong></br>
-							<span class="glyphicon glyphicon-ok-sign"></span>
-							昵称部分请凭个人意愿填写真实姓名或者昵称</br>
-							<span class="glyphicon glyphicon-ok-sign"></span>
-							表白对象建议加上对方的班级</br>
+							
 							<span class="glyphicon glyphicon-ok-sign"></span>
 							为防止刷屏，每隔5分钟可以发布一次消息
 						</div>
@@ -89,12 +86,10 @@
 						</div>
 						<input name="from" value="call" style="display: none;">
 						<input name="realname" class="form-control" placeholder="昵称..." required="" autofocus="autofocus"></br>
-						<input name="towho" class="form-control" placeholder="送给..." required="" autofocus=""></br>
+						<input name="towho" class="form-control" placeholder="发表栏目..." required="" autofocus=""></br>
 						<input name="qq" class="form-control" placeholder="你的QQ,不会显示出来..." autofocus=""></br>
-						<input name="phone" class="form-control" placeholder="被表白人手机号：如需通过匿名短信通知被表白人请填写..." autofocus=""></br>
-						<input name="key" class="form-control" placeholder="短信KEY：使用短信服务则填写，用于验证余额..." autofocus=""></br>
 						<textarea class="form-control" name="content" placeholder="留言内容（不超过140字）" rows="3" onkeyup='value=value.substr(0,140);this.nextSibling.innerHTML=value.length+"/140";'></textarea></br>
-						<input  class="btn btn-primary btn-lg btn-block" TYPE="submit" name="submit" value="发布表白" />
+						<input  class="btn btn-primary btn-lg btn-block" TYPE="submit" name="submit" value="CALL！" />
 					</form>
 				</div>
 			</div>
