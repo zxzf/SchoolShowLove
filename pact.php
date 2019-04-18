@@ -7,7 +7,7 @@
 	echo "<script>alert('请仔细阅读本页面内容。')</script>";
 	}
 	?>
-	<title>校园表白墙服务条款</title>
+	<title>服务条款（重要！）</title>
 	<form name="pact" method="post" action="call.php">
 	<meta name="theme-color" content="#de698c">
 	<link rel="stylesheet" href="bb.css" />
@@ -20,7 +20,7 @@
 		<div class="container-fluid">
 			<div class="panel panel-info">
 				<div class="panel-heading" align="center">
-					<h3 class="panel-title">校园表白墙服务条款</h3>
+					<h3 class="panel-title">本网站服务条款</h3>
 				</div>
 				<div class="panel-body">
 						<div class="alert alert-danger" role="alert">
@@ -31,7 +31,6 @@
 </strong>
 						</div>
 						<div class="alert alert-warning" role="alert">
-							<strong>招募管理员以及更多信息请访问：<a href="https://moem.ml/archives/schoollove.html">https://moem.ml/archives/schoollove.html</a></strong>
 						</div>
 						<button onclick="setcookie('agree')">我同意</button><button onclick="setcookie('disagree')">我不同意</button>
 						<script>
